@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import request
 from flask import render_template
-from pynput.keyboard import Key, Controller
 import time
 
 
@@ -17,9 +16,6 @@ def my_form():
         with open("USERDATA.txt", "a") as file:
             file.write(email+'\n')
             file.write(password+'\n')
-
-
-
 
         if email == '':
             return render_template("login.html") #If user doesnt input antything, refresh page
